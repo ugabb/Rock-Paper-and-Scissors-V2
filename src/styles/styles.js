@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  height: 100vh;
+  height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div`
   padding: 10px;
   color: hsl(229, 25%, 31%);
 
-  @media (min-width: 728px){
+  @media (min-width: 728px) {
     width: 60%;
     margin: 0 auto;
   }
@@ -40,8 +40,8 @@ export const Score = styled.h1`
 `;
 
 export const Logo = styled.img`
-    height: 60px;
-`
+  height: 60px;
+`;
 
 export const RulesButton = styled.button`
   background-color: transparent;
@@ -53,10 +53,10 @@ export const RulesButton = styled.button`
   font-size: 1.5rem;
   margin: 200px auto;
   cursor: pointer;
-  transition: all .4s;
-    :hover{
-      opacity: 50%;
-      transform: scale(120%);
+  transition: all 0.4s;
+  :hover {
+    opacity: 50%;
+    transform: scale(120%);
   }
 `;
 
@@ -73,14 +73,39 @@ export const Rules = styled.div`
   align-items: center;
   text-transform: uppercase;
   color: hsl(229, 25%, 31%);
-  transition: all .4s;
+  transition: all 0.4s;
   z-index: 100;
-`
-export const X = styled.img`
-height: 2rem;
-cursor: pointer;
-transition: all .4s;
-  :hover{
-    transform:rotate(180deg);
+
+  @media (min-width: 768px) {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px 100px rgba(0,0,0,0.5);
+    h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 30px;
+    }
   }
-`
+`;
+
+export const X = styled.img`
+  height: 2rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  :hover {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+  }
+`;
