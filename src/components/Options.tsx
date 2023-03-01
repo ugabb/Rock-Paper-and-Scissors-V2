@@ -17,6 +17,9 @@ import Option from "./Option";
 import { useDispatch } from "react-redux";
 import { increment, decrement } from "@/features/score/score";
 
+// MOTION
+import { motion } from "framer-motion";
+
 type Props = {};
 
 const Options = (props: Props) => {
@@ -39,8 +42,11 @@ const Options = (props: Props) => {
     setHouseChoice(choices[randomNumber]);
   };
 
+  
+
   // LOGIC!
   useEffect(() => {
+    
     if (userChoice === houseChoice) {
       // draw
       setGameStatus("DRAW");
@@ -52,13 +58,12 @@ const Options = (props: Props) => {
       //won
       setGameStatus(" YOU WIN");
       // UPDATE SCORE
-      dispatch(increment())
-
+      dispatch(increment());
     } else {
       //lose
       setGameStatus(" YOU LOSE");
       // UPDATE SCORE
-      dispatch(decrement())
+      dispatch(decrement());
     }
   }, [houseChoice]);
 

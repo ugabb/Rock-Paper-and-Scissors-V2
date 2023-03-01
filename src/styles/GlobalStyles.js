@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
- const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+const GlobalStyles = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 
     *{
@@ -10,5 +10,5 @@ import { createGlobalStyle } from "styled-components";
         box-sizing: border-box;
         font-family: 'Barlow Semi Condensed', sans-serif;
     }
-`
-export default GlobalStyles
+`;
+export default GlobalStyles;
